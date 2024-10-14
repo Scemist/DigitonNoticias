@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Scemist Handbook</title>
+
+	<script
+			src="https://cdn.tailwindcss.com/3.3.3?plugins=forms@0.5.4,typography@0.5.9,aspect-ratio@0.4.2,line-clamp@0.4.4"></script>
+	<script src="https://unpkg.com/lucide@latest"></script>
+
+	<script>
+		// It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+		if (
+			localStorage.getItem('color-theme') === 'dark' ||
+			(!('color-theme' in localStorage) &&
+				window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	</script>
+
+</head>
+
+<body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400">
+	<header
+			class="w-full py-5 flex justify-center bg-gray-300 dark:bg-slate-800 shadow-md mb-6 border-b border-b-gray-400 dark:border-b-gray-600">
+		<nav class="max-w-2xl flex flex-1 justify-between px-6 lg:px-0">
+			<h1 class="text-2xl text-gray-800 dark:text-gray-200 font-semibold flex items-center">
+				<i data-lucide="code" class="mr-2"></i> Handbook Scemist
+			</h1>
+
+			<div class="flex items-center">
+				<button class="text-gray-800 dark:text-gray-300 p-1 rounded dark:hover:bg-zinc-900 dark:hover:shadow"
+						id="toggleMenu">
+					<i data-lucide="menu" class="h-7 w-7"></i>
+				</button>
+			</div>
+		</nav>
+	</header>
+
+	<main class="max-w-3xl leading-8 px-6 lg:px-0">
+		<section>
+			<h1 class="text-3xl font-semibold mt-3 mb-8 text-gray-700 dark:text-gray-400">
+				DevOps: Mais que um papel, uma mudança de cultura e de entrega de valor
+			</h1>
+
+			<div class="text-gray-500 flex justify-between">
+				<span class="flex items-center gap-2"><i data-lucide="pencil-line"></i> Written at
+					<strong>12/06/2023</strong></span>
+				<span class="flex items-center gap-2">
+					<img class="w-8 border border-gray-400 rounded-full"
+						 src="https://avatars.githubusercontent.com/u/68157089?s=150&u=abcbbc919c91cf2cd6f4bc5cb11c6db02c5f8a48&v=4"
+						 alt="">
+
+					By <strong class="text-gray-700">Lucas Scemist</strong>
+				</span>
+			</div>
+
+			<hr class="border-t-2 border-gray-500 mt-6 mb-6">
+		</section>
+
+		<div class="mb-6 text-center">
+			<span
+				  class="border dark:border-blue-950 rounded-md bg-blue-200 dark:bg-blue-500 dark:bg-opacity-70 text-blue-600 dark:text-blue-300 text-sm py-1 px-2 mx-3">DevOps</span>
+			<span
+				  class="border dark:border-blue-950 rounded-md bg-blue-200 dark:bg-blue-500 dark:bg-opacity-70 text-blue-600 dark:text-blue-300 text-sm py-1 px-2 mx-3">Programação</span>
+		</div>
+
+		<div
+			 class="relative font-semibold tracking-wide mb-10 overflow-hidden rounded-md shadow border border-gray-400 dark:border-gray-800">
+			<div class="h-80 relative overflow-hidden">
+				<img class="absolute min-w-full top-1/2 -translate-y-1/2"
+					 src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+					 alt="Imagem Ilustrativa de Código.">
+			</div>
+
+			<div class="absolute top-3 right-3 text-gray-700"><i data-lucide="presentation"></i></div>
+
+			<div
+				 class="text-gray-800 dark:text-gray-400 bg-gray-300 dark:bg-slate-800 rounded text-lg leading-8 pt-9 pb-12 px-8">
+				<hr class="mt-0 border-y-2 w-40 mx-auto mb-7 rounded border-slate-500">
+
+				<p>
+					A proposta do DevOps permite uma maior transparência e eficiência, garantindo não apenas redução de
+					gargalos
+					e silos de comunicação, mas uma força competitiva no mercado. De forma geral, o modelo DevOps
+					apresenta
+					quatro grandes pilares
+				</p>
+			</div>
+		</div>
+
+		<div class="flex justify-center">
+			<ul class="mb-7 text-lg leading-10 text-gray-800 dark:text-gray-300 px-14 w-fit">
+				<li class="flex items-center">
+					<i data-lucide="play" class="h-5 mr-4 text-gray-400"></i>
+					<a href="#o-que-e-devops" class="hover:text-zinc-500">O que é o Devops</a>
+				</li>
+				<li class="flex items-center">
+					<i data-lucide="dot" class="h-5 mr-4 text-gray-400"></i>
+					<a href="#o-que-e-devops" class="hover:text-zinc-500">Quais os Objetivos do DevOps</a>
+				</li>
+				<li class="flex items-center">
+					<i data-lucide="dot" class="h-5 mr-4 text-gray-400"></i>
+					<a href="#o-que-e-devops" class="hover:text-zinc-500">Devo Fazer Tudo o que há pela frente?</a>
+				</li>
+				<li class="flex items-center">
+					<i data-lucide="dot" class="h-5 mr-4 text-gray-400"></i>
+					<a href="#o-que-e-devops" class="hover:text-zinc-500">Referencia Prática</a>
+				</li>
+				<li class="flex items-center">
+					<i data-lucide="brain" class="h-5 mr-4 text-gray-400"></i>
+					<a href="#o-que-e-devops" class="hover:text-zinc-500">Resumo</a>
+				</li>
+			</ul>
+		</div>
+
+		<p class="mb-10">
+			Empresas de diversos setores, especialmente o digital, têm combinado seus times de desenvolvimento e
+			operações, ou seja, rearranjando as responsabilidades e colaboração entre estas áreas. O intuito é a criação
+			de uma cultura baseada em melhoria contínua. Uma tarefa desafiadora, mas que representa uma série de
+			benefícios se feita adequadamente. Trata-se do DevOps, um conceito poderoso do mundo digital que vem
+			ajudando empresas e profissionais de TI a atingir suas metas.
+		</p>
+		<p class="mb-10">
+			O conceito DevOps envolve cultura, ferramentas e processos ágeis. Essa combinação acarreta no aumento da
+			produtividade e da capacidade da empresa em oferecer softwares e aplicativos. Tudo isso a partir do
+			aperfeiçoamento de seus produtos em ritmo mais acelerado que empresas tradicionais de desenvolvimento de
+			software e gerenciamento de infraestrutura.
+		</p>
+		<p class="mb-10">
+			A proposta do DevOps permite uma maior transparência e eficiência, garantindo não apenas redução de gargalos
+			e silos de comunicação, mas uma força competitiva no mercado. De forma geral, o modelo DevOps apresenta
+			quatro grandes pilares:
+		</p>
+		<p class="mb-10">
+		<ol class="list-decimal list-inside text-xl leading-10 text-gray-700 dark:text-gray-400">
+			<li>Comunicação;</li>
+			<li>Colaboração;</li>
+			<li>Automação;</li>
+			<li>Monitoração.</li>
+		</ol>
+		</p>
+		<!-- 
+		<p class="mb-10">
+		</p> 
+		-->
+
+		<h1 class="text-3xl font-semibold mt-12 mb-8 text-gray-700 dark:text-gray-400">
+			Os benefícios de adotar uma cultura DevOps
+			<hr class="border-t border-gray-300 mt-2">
+		</h1>
+
+		<p class="mb-10">
+			A cultura DevOps engloba diferentes tarefas e métodos a fim de alcançar suas metas, seguindo as necessidades
+			de cada projeto. A partir de sua implementação muitas empresas que passaram a aplicar o conceito DevOps em
+			sua atuação no mercado tem vivenciado uma série de benefícios em seus processos e ambiente organizacional.
+
+			A seguir listo cinco benefícios que essa cultura vai oferecer ao seu negócio:
+		</p>
+
+	</main>
+
+	<div id="modalFilter" class="hidden w-screen h-screen fixed">
+		<div class="dismiss-menu w-full h-full items-center justify-center fixed bg-gray-800 opacity-80">
+		</div>
+	</div>
+
+	<div id="menuModal"
+		 class="hidden fixed top-1/2 -translate-y-1/2 z-50 overflow-x-hidden overflow-y-auto max-w-xl shadow shadow-gray-900">
+		<div class="relative bg-gray-200 rounded-lg shadow dark:bg-slate-700 px-5 py-2">
+
+			<div
+				 class="flex items-start justify-between p-2 border-b border-gray-400 rounded-t dark:border-gray-600 gap-20">
+				<h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
+					Handbook <span class="text-gray-500 font-medium ml-2">menu</span>
+				</h3>
+				<button type="button"
+						class="dismiss-menu text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+						data-modal-hide="defaultModal">
+					<i data-lucide="x"></i>
+					<span class="sr-only">Close modal</span>
+				</button>
+			</div>
+
+			<div class="flex flex-col p-6 space-y-6">
+				<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Contribuir</button>
+				<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Saber Mais</button>
+				<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Materias</button>
+			</div>
+
+			<!-- <div class="p-6 space-y-6">
+				<p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+					With less than a month to go before the European Union enacts new consumer privacy laws for
+					its citizens, companies around the world are updating their terms of service agreements to
+					comply.
+				</p>
+				<p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+					The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May
+					25 and is meant to ensure a common set of data rights in the European Union. It requires
+					organizations to notify users as soon as possible of high-risk data breaches that could
+					personally affect them.
+				</p>
+			</div> -->
+			<!-- Modal footer
+			<div class="flex items-center p-6 space-x-2 border-t border-gray-400 rounded-b dark:border-gray-600">
+				<button data-modal-hide="defaultModal" type="button"
+						class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
+					accept</button>
+				<button data-modal-hide="defaultModal" type="button"
+						class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+			</div> -->
+		</div>
+	</div>
+	</div>
+
+	<script>
+		lucide.createIcons();
+
+		const toggleMenuButton = document.querySelector('#toggleMenu')
+
+		const disableMenu = () => {
+			const menuModal = document.querySelector('#menuModal')
+			const modalFilter = document.querySelector('#modalFilter')
+
+			menuModal.classList.add('hidden')
+			modalFilter.classList.add('hidden')
+		}
+
+		const enableMenu = () => {
+			const menuModal = document.querySelector('#menuModal')
+			const modalFilter = document.querySelector('#modalFilter')
+
+			menuModal.classList.remove('hidden')
+			modalFilter.classList.remove('hidden')
+		}
+
+		toggleMenuButton.onclick = () => {
+			return menuModal.classList.contains('hidden')
+				? enableMenu()
+				: disableMenu()
+
+		}
+
+		const dismissMenu = document.querySelectorAll('.dismiss-menu')
+			.forEach(element => element.onclick = disableMenu)
+	</script>
+</body>
+
+</html>
