@@ -38,12 +38,28 @@
 	<script>
 		tailwind.config = { darkMode: 'class' }
 
-		if (localStorage.getItem('theme') === 'dark')
+		const makeDark = () => {
+			const themeButon = document.querySelector('#theme')
+			const logoImage = document.querySelector('#logoImage')
 			document.documentElement.classList.add('dark')
-		else if (localStorage.getItem('theme') === 'light')
+			localStorage.setItem('theme', 'dark')
+			themeButon?.setAttribute('data-lucide', 'moon-star')
+			logoImage && (logoImage.src = 'https://noticias.digiton.tech/images/full-logo-white.svg')
+		}
+
+		const makeLight = () => {
+			const themeButon = document.querySelector('#theme')
+			const logoImage = document.querySelector('#logoImage')
 			document.documentElement.classList.remove('dark')
-		else if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-			document.documentElement.classList.add('dark')
+			localStorage.setItem('theme', 'dark')
+			themeButon?.setAttribute('data-lucide', 'sun')
+			logoImage && (logoImage.src = 'https://noticias.digiton.tech/images/full-logo.svg')
+		}
+
+		if (localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches)
+			makeDark()
+		else
+			makeLight()
 	</script>
 
 	<script src="https://unpkg.com/lucide@latest"></script>
@@ -51,22 +67,22 @@
 
 <body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400">
 	<header
-			class="w-full py-5 flex justify-center bg-gray-300 dark:bg-slate-800 shadow-md mb-6 border-b border-b-gray-400 dark:border-b-gray-600">
+			class="w-full py-4 flex justify-center bg-gray-300 dark:bg-slate-800 shadow-md mb-6 border-b border-b-gray-300 dark:border-b-gray-600">
 		<nav class="max-w-2xl flex flex-1 justify-between px-6 lg:px-0">
 			<!-- <h1 class="text-2xl text-gray-800 dark:text-gray-200 font-semibold flex items-center">
 				<i data-lucide="code" class="mr-2"></i> Digiton
 			</h1> -->
 
 			<a class="text-2xl flex items-center" href="/">
-				<img alt="Digiton News" class="h-11 mx-4 my-2" src="/images/full-logo-white.svg">
+				<img id="logoImage" alt="Digiton News" class="h-9 mx-4 my-2" src="https://noticias.digiton.tech/images/full-logo-white.svg">
 			</a>
 
 			<div class="flex items-center">
 				<button id="theme"
-						class="text-gray-800 dark:text-gray-300 p-1 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2">
+						class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2">
 					<i data-lucide="sun" class="h-7 w-7"></i>
 				</button>
-				<button class="text-gray-800 dark:text-gray-300 p-1 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2"
+				<button class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2"
 						id="toggleMenu">
 					<i data-lucide="menu" class="h-7 w-7"></i>
 				</button>
@@ -81,14 +97,14 @@
 			</h1>
 
 			<div class="text-gray-500 flex justify-between">
-				<span class="flex items-center gap-2"><i data-lucide="pencil-line"></i> Written at
+				<span class="flex items-center gap-2"><i data-lucide="pencil-line"></i> De
 					<strong>12/06/2023</strong></span>
 				<span class="flex items-center gap-2">
 					<img class="w-8 border border-gray-400 rounded-full"
 						 src="https://avatars.githubusercontent.com/u/68157089?s=150&u=abcbbc919c91cf2cd6f4bc5cb11c6db02c5f8a48&v=4"
 						 alt="">
 
-					By <strong class="text-gray-700">Lucas Scemist</strong>
+					Por <strong class="text-gray-700">Lucas Scemist</strong>
 				</span>
 			</div>
 
@@ -209,7 +225,7 @@
 			<div
 				 class="flex items-start justify-between p-2 border-b border-gray-400 rounded-t dark:border-gray-600 gap-20">
 				<h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
-					Handbook <span class="text-gray-500 font-medium ml-2">menu</span>
+					Digiton <span class="text-gray-500 font-medium ml-2">menu</span>
 				</h3>
 				<button type="button"
 						class="dismiss-menu text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -297,22 +313,6 @@
 		}
 
 		document.addEventListener('DOMContentLoaded', handleTheme)
-
-		const makeDark = () => {
-			const themeButon = document.querySelector('#theme')
-			document.documentElement.classList.add('dark')
-			localStorage.setItem('theme', 'dark')
-			themeButon.setAttribute('data-lucide', 'moon-star')
-			console.log('changing theme')
-		}
-
-		const makeLight = () => {
-			const themeButon = document.querySelector('#theme')
-			document.documentElement.classList.remove('dark')
-			localStorage.setItem('theme', 'dark')
-			themeButon.setAttribute('data-lucide', 'sun')
-			console.log('changing theme')
-		}
 
 		const themeButon = document.querySelector('#theme')
 		themeButon.addEventListener('click', () => {
