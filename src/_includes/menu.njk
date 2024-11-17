@@ -1,0 +1,23 @@
+<div class="hidden w-screen h-screen fixed" id="modalFilter">
+	<div class="dismiss-menu w-full h-full items-center justify-center fixed bg-gray-800 opacity-80"></div>
+</div>
+
+<div class="hidden fixed top-1/2 -translate-y-1/2 z-50 rounded-lg overflow-x-hidden overflow-y-auto max-w-xl shadow" id="menuModal">
+	<div class="relative bg-gray-200 px-5 py-2 dark:bg-slate-700">
+		<div class="flex items-start justify-between p-2 border-b border-gray-400 rounded-t dark:border-gray-600 gap-20">
+			<h3 class="text-2xl text-gray-500 dark:text-white">
+				<span class="text-gray-900 dark:text-white font-semibold ml-2">Menu</span> Digiton
+			</h3>
+			<button class="dismiss-menu text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal" type="button">
+				<i data-lucide="x"></i>
+				<span class="sr-only">Close modal</span>
+			</button>
+		</div>
+
+		<div class="flex flex-col p-6 space-y-6">
+			<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Contribuir</button>
+			<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Saber Mais</button>
+			<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Materias</button>
+		</div>
+	</div>
+</div>

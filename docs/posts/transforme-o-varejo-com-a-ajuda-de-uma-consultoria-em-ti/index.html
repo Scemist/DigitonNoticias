@@ -1,198 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<meta content="ie=edge" http-equiv="X-UA-Compatible">
+		<link href="favicon.svg" rel="icon">
 
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="ie=edge" http-equiv="X-UA-Compatible">
-	<link href="favicon.svg" rel="icon">
+		<meta content="index, follow" name="robots">
 
-	<meta content="index, follow" name="robots">
+		<title>Bem-vindo ao Blog</title>
 
-	<title>Bem-vindo ao Blog</title>
-	<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." name="description">
+		<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." name="description">
 
-	<meta content="http://digiton.tech/images/full-logo.svg" name="image">
+<meta content="http://digiton.tech/images/full-logo.svg" name="image">
 
-	<meta content="@digiton" name="twitter:site">
-	<meta content="summary_large_image" name="twitter:card">
-	<meta content="Digiton Tecnologia" name="twitter:title">
-	<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." name="twitter:description">
-	<meta content="http://digiton.tech/images/full-logo.svg" name="twitter:image:src">
+<meta content="@digiton" name="twitter:site">
+<meta content="summary_large_image" name="twitter:card">
+<meta content="Digiton Tecnologia" name="twitter:title">
+<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." name="twitter:description">
+<meta content="http://digiton.tech/images/full-logo.svg" name="twitter:image:src">
 
-	<meta content="http://noticias.digiton.tech/images/preview.png" property="og:image">
-	<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." property="og:image:alt">
-	<meta content="300" property="og:image:width">
-	<meta content="300" property="og:image:height">
-	<meta content="Digiton" property="og:site_name">
-	<meta content="object" property="og:type">
-	<meta content="Digiton Noticias" property="og:title">
-	<meta content="https://noticias.digiton.tech" property="og:url">
-	<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." property="og:description">
-	<meta content="noticias.digiton.tech" name="hostname">
+<meta content="http://noticias.digiton.tech/images/preview.png" property="og:image">
+<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." property="og:image:alt">
+<meta content="300" property="og:image:width">
+<meta content="300" property="og:image:height">
+<meta content="Digiton" property="og:site_name">
+<meta content="object" property="og:type">
+<meta content="Digiton Noticias" property="og:title">
+<meta content="https://noticias.digiton.tech" property="og:url">
+<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." property="og:description">
+<meta content="noticias.digiton.tech" name="hostname">
 
-	<link color="#000000" href="http://noticias.digiton.tech/images/full-logo.svg" rel="mask-icon">
-	<link href="http://noticias.digiton.tech/images/full-logo.svg" rel="fluid-icon" title="Digiton">
+<link color="#000000" href="http://noticias.digiton.tech/images/full-logo.svg" rel="mask-icon">
+<link href="http://noticias.digiton.tech/images/full-logo.svg" rel="fluid-icon" title="Digiton">
 
-	<style>
-		*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.right-3{right:.75rem}.top-1\/2{top:50%}.top-3{top:.75rem}.z-50{z-index:50}.mx-2{margin-left:.5rem;margin-right:.5rem}.mx-3{margin-left:.75rem;margin-right:.75rem}.mx-4{margin-left:1rem;margin-right:1rem}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-top:.5rem;margin-bottom:.5rem}.mb-10{margin-bottom:2.5rem}.mb-6{margin-bottom:1.5rem}.mb-7{margin-bottom:1.75rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:.5rem}.ml-auto{margin-left:auto}.mr-2{margin-right:.5rem}.mr-4{margin-right:1rem}.mt-0{margin-top:0}.mt-3{margin-top:.75rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-5{height:1.25rem}.h-52{height:13rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-full{height:100%}.h-screen{height:100vh}.w-40{width:10rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.w-screen{width:100vw}.min-w-full{min-width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:.5rem}.gap-20{gap:5rem}.gap-5{gap:1.25rem}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-t{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.border{border-width:1px}.border-y-2{border-top-width:2px;border-bottom-width:2px}.border-b{border-bottom-width:1px}.border-t-2{border-top-width:2px}.border-gray-400{--tw-border-opacity:1;border-color:rgb(156 163 175/var(--tw-border-opacity,1))}.border-gray-500{--tw-border-opacity:1;border-color:rgb(107 114 128/var(--tw-border-opacity,1))}.border-slate-500{--tw-border-opacity:1;border-color:rgb(100 116 139/var(--tw-border-opacity,1))}.border-b-gray-300{--tw-border-opacity:1;border-bottom-color:rgb(209 213 219/var(--tw-border-opacity,1))}.bg-blue-200{--tw-bg-opacity:1;background-color:rgb(191 219 254/var(--tw-bg-opacity,1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity,1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity,1))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219/var(--tw-bg-opacity,1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.p-2{padding:.5rem}.p-6{padding:1.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-12{padding-bottom:3rem}.pb-16{padding-bottom:4rem}.pt-9{padding-top:2.25rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xs{font-size:.75rem;line-height:1rem}.font-semibold{font-weight:600}.leading-10{line-height:2.5rem}.leading-7{line-height:1.75rem}.leading-8{line-height:2rem}.leading-relaxed{line-height:1.625}.tracking-wide{letter-spacing:.025em}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity,1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55/var(--tw-text-opacity,1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity,1))}.opacity-80{opacity:.8}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-md{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity,1))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity,1))}.hover\:text-zinc-500:hover{--tw-text-opacity:1;color:rgb(113 113 122/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:flex-row{flex-direction:row}}@media (min-width:768px){.md\:h-80{height:20rem}.md\:px-14{padding-left:3.5rem;padding-right:3.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:leading-8{line-height:2rem}}@media (min-width:1024px){.lg\:px-0{padding-left:0;padding-right:0}}@media (prefers-color-scheme:dark){.dark\:border-gray-600{--tw-border-opacity:1;border-color:rgb(75 85 99/var(--tw-border-opacity,1))}.dark\:border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55/var(--tw-border-opacity,1))}.dark\:border-b-gray-600{--tw-border-opacity:1;border-bottom-color:rgb(75 85 99/var(--tw-border-opacity,1))}.dark\:bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246/var(--tw-bg-opacity,1))}.dark\:bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.dark\:bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.dark\:bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.dark\:bg-opacity-70{--tw-bg-opacity:0.7}.dark\:text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253/var(--tw-text-opacity,1))}.dark\:text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235/var(--tw-text-opacity,1))}.dark\:text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity,1))}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.dark\:hover\:bg-gray-600:hover{--tw-bg-opacity:1;background-color:rgb(75 85 99/var(--tw-bg-opacity,1))}.dark\:hover\:bg-zinc-900:hover{--tw-bg-opacity:1;background-color:rgb(24 24 27/var(--tw-bg-opacity,1))}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.dark\:hover\:shadow:hover{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}}
-	</style>
-</head>
+		<style>
+			*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.right-3{right:.75rem}.top-1\/2{top:50%}.top-3{top:.75rem}.z-50{z-index:50}.mx-2{margin-left:.5rem;margin-right:.5rem}.mx-3{margin-left:.75rem;margin-right:.75rem}.mx-4{margin-left:1rem;margin-right:1rem}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-top:.5rem;margin-bottom:.5rem}.mb-10{margin-bottom:2.5rem}.mb-6{margin-bottom:1.5rem}.mb-7{margin-bottom:1.75rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:.5rem}.ml-auto{margin-left:auto}.mr-4{margin-right:1rem}.mt-0{margin-top:0}.mt-12{margin-top:3rem}.mt-3{margin-top:.75rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-5{height:1.25rem}.h-52{height:13rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-full{height:100%}.h-screen{height:100vh}.w-40{width:10rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.w-screen{width:100vw}.min-w-full{min-width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:.5rem}.gap-20{gap:5rem}.gap-5{gap:1.25rem}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-t{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.border{border-width:1px}.border-y-2{border-top-width:2px;border-bottom-width:2px}.border-b{border-bottom-width:1px}.border-t-2{border-top-width:2px}.border-gray-400{--tw-border-opacity:1;border-color:rgb(156 163 175/var(--tw-border-opacity,1))}.border-gray-500{--tw-border-opacity:1;border-color:rgb(107 114 128/var(--tw-border-opacity,1))}.border-slate-500{--tw-border-opacity:1;border-color:rgb(100 116 139/var(--tw-border-opacity,1))}.border-b-gray-300{--tw-border-opacity:1;border-bottom-color:rgb(209 213 219/var(--tw-border-opacity,1))}.bg-blue-200{--tw-bg-opacity:1;background-color:rgb(191 219 254/var(--tw-bg-opacity,1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity,1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity,1))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219/var(--tw-bg-opacity,1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.p-2{padding:.5rem}.p-6{padding:1.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-12{padding-bottom:3rem}.pb-16{padding-bottom:4rem}.pt-9{padding-top:2.25rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-semibold{font-weight:600}.leading-10{line-height:2.5rem}.leading-7{line-height:1.75rem}.leading-8{line-height:2rem}.leading-relaxed{line-height:1.625}.tracking-wide{letter-spacing:.025em}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity,1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55/var(--tw-text-opacity,1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity,1))}.opacity-80{opacity:.8}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-md{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity,1))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity,1))}.hover\:text-zinc-500:hover{--tw-text-opacity:1;color:rgb(113 113 122/var(--tw-text-opacity,1))}.dark\:border-gray-600:is(.dark *){--tw-border-opacity:1;border-color:rgb(75 85 99/var(--tw-border-opacity,1))}.dark\:border-gray-800:is(.dark *){--tw-border-opacity:1;border-color:rgb(31 41 55/var(--tw-border-opacity,1))}.dark\:border-b-gray-600:is(.dark *){--tw-border-opacity:1;border-bottom-color:rgb(75 85 99/var(--tw-border-opacity,1))}.dark\:bg-blue-500:is(.dark *){--tw-bg-opacity:1;background-color:rgb(59 130 246/var(--tw-bg-opacity,1))}.dark\:bg-slate-700:is(.dark *){--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.dark\:bg-slate-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.dark\:bg-slate-900:is(.dark *){--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.dark\:bg-opacity-70:is(.dark *){--tw-bg-opacity:0.7}.dark\:text-blue-300:is(.dark *){--tw-text-opacity:1;color:rgb(147 197 253/var(--tw-text-opacity,1))}.dark\:text-gray-300:is(.dark *){--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity,1))}.dark\:text-gray-400:is(.dark *){--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.dark\:text-white:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.dark\:hover\:bg-gray-600:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(75 85 99/var(--tw-bg-opacity,1))}.dark\:hover\:bg-zinc-900:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(24 24 27/var(--tw-bg-opacity,1))}.dark\:hover\:text-white:hover:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.dark\:hover\:shadow:hover:is(.dark *){--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}@media (min-width:640px){.sm\:flex-row{flex-direction:row}}@media (min-width:768px){.md\:h-80{height:20rem}.md\:px-14{padding-left:3.5rem;padding-right:3.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:leading-8{line-height:2rem}}@media (min-width:1024px){.lg\:px-0{padding-left:0;padding-right:0}}
+		</style>
+	</head>
 
-<body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400">
-	<header
-									class="w-full py-4 flex justify-center bg-gray-100 dark:bg-slate-800 shadow-sm mb-6 border-b border-b-gray-300 dark:border-b-gray-600">
-		<nav class="max-w-2xl flex flex-1 justify-between px-6 lg:px-0">
-			<!-- <h1 class="text-2xl text-gray-800 dark:text-gray-200 font-semibold flex items-center">
-				<i class="mr-2" data-lucide="code"></i> Digiton
-			</h1> -->
+	<body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400">
+		<header class="w-full py-4 flex justify-center bg-gray-100 dark:bg-slate-800 shadow-sm mb-6 border-b border-b-gray-300 dark:border-b-gray-600">
+	<nav class="max-w-2xl flex flex-1 justify-between px-6 lg:px-0">
+		<a class="text-2xl flex items-center" href="/">
+			<img alt="Digiton News" class="h-9 mx-4 my-2" id="logoImage" src="https://noticias.digiton.tech/images/full-logo-white.svg">
+		</a>
 
-			<a class="text-2xl flex items-center" href="/">
-				<img alt="Digiton News" class="h-9 mx-4 my-2" id="logoImage" src="https://noticias.digiton.tech/images/full-logo-white.svg">
-			</a>
-
-			<div class="flex items-center">
-				<button class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2" id="theme">
-					<i class="h-7 w-7" data-lucide="sun" id="themeIcon"></i>
-				</button>
-				<button class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2" id="toggleMenu">
-					<i class="h-7 w-7" data-lucide="menu"></i>
-				</button>
-			</div>
-		</nav>
-	</header>
-
-	<main class="max-w-3xl leading-8 px-6 lg:px-0 pb-16">
-		<section>
-			<h1 class="text-3xl font-semibold mt-3 mb-8 text-gray-700 dark:text-gray-400">
-				Bem-vindo ao Blog
-			</h1>
-
-			<div class="text-gray-500 flex justify-between flex-wrap gap-2 text-xs">
-				<span class="flex items-center gap-2">
-					<i class="w-7 h-7" data-lucide="pencil-line"></i> De
-					<strong>16/11/2024</strong>
-				</span>
-
-				<span class="flex items-center gap-2">
-					<img alt="" class="w-7 h-7 border border-gray-400 rounded-full" src="https://avatars.githubusercontent.com/u/68157089?s=150&u=abcbbc919c91cf2cd6f4bc5cb11c6db02c5f8a48&v=4">
-					Por <strong class="text-gray-700">Lucas Scemist</strong>
-				</span>
-			</div>
-
-			<hr class="border-t-2 border-gray-500 mt-6 mb-6">
-		</section>
-
-		<div class="mb-6 text-center">
-			<span class="rounded-md bg-blue-200 dark:bg-blue-500 dark:bg-opacity-70 text-blue-600 dark:text-blue-300 text-sm py-1 px-2 mx-3">Varejo</span>
-			<span class="rounded-md bg-blue-200 dark:bg-blue-500 dark:bg-opacity-70 text-blue-600 dark:text-blue-300 text-sm py-1 px-2 mx-3">Negócios</span>
+		<div class="flex items-center">
+			<button class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2" id="theme">
+				<i class="h-7 w-7" data-lucide="sun" id="themeIcon"></i>
+			</button>
+			<button class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2" id="toggleMenu">
+				<i class="h-7 w-7" data-lucide="menu"></i>
+			</button>
 		</div>
+	</nav>
+</header>
 
-		<div
-							class="relative font-semibold tracking-wide mb-10 overflow-hidden rounded-md shadow border border-gray-400 dark:border-gray-800">
-			<div class="h-52 md:h-80 relative overflow-hidden">
-				<img alt="Imagem Ilustrativa de Código." class="absolute min-w-full top-1/2 -translate-y-1/2" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+		<main class="max-w-3xl leading-8 px-6 lg:px-0 pb-16">
+			<section>
+				<h1 class="text-3xl font-semibold mt-3 mb-8 text-gray-700 dark:text-gray-400">
+					Bem-vindo ao Blog
+				</h1>
+
+				<div class="text-gray-500 flex justify-between flex-wrap gap-2 text-xs">
+					<span class="flex items-center gap-2">
+						<i class="w-7 h-7" data-lucide="pencil-line"></i>
+						De <strong></strong>
+					</span>
+
+					<span class="flex items-center gap-2">
+						<img alt="" class="w-7 h-7 border border-gray-400 rounded-full" src="">
+						Por <strong class="text-gray-700"></strong>
+					</span>
+				</div>
+
+				<hr class="border-t-2 border-gray-500 mt-6 mb-6">
+			</section>
+
+			<div class="mb-6 text-center">
+				
 			</div>
 
-			<div class="absolute top-3 right-3 text-gray-700"><i data-lucide="presentation"></i></div>
+			<div class="relative font-semibold tracking-wide mb-10 overflow-hidden rounded-md shadow border border-gray-400 dark:border-gray-800">
+				<div class="h-52 md:h-80 relative overflow-hidden">
+					<img alt="Imagem Ilustrativa de Código." class="absolute min-w-full top-1/2 -translate-y-1/2" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+				</div>
 
-			<div class="text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-slate-800 rounded md:text-lg leading-7 md:leading-8 pt-9 pb-12 px-8">
-				<hr class="mt-0 border-y-2 w-40 mx-auto mb-7 rounded border-slate-500">
+				<div class="absolute top-3 right-3 text-gray-700">
+					<i data-lucide="presentation"></i>
+				</div>
 
-				<p>
-					No mundo dinâmico do varejo, onde as mudanças acontecem em um piscar de olhos, a tecnologia deixou de ser apenas um suporte e se tornou protagonista. Mas a pergunta é: sua empresa está realmente aproveitando tudo o que a tecnologia pode oferecer? Se a resposta for “não sei” ou “ainda não”, você está no lugar certo! Vamos explorar como uma consultoria em TI pode ser o motor que levará sua empresa de varejo para o próximo nível.
-				</p>
+				<div class="text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-slate-800 rounded md:text-lg leading-7 md:leading-8 pt-9 pb-12 px-8">
+					<hr class="mt-0 border-y-2 w-40 mx-auto mb-7 rounded border-slate-500">
+
+					<p></p>
+				</div>
 			</div>
-		</div>
 
-		<div class="flex justify-center">
-			<ul class="mb-7 md:text-lg leading-10 text-gray-800 dark:text-gray-300 px-4 md:px-14 w-fit flex flex-col gap-2">
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="play"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Como Você Ganha?</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Suas Necessidades</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Modernizando sua Operação</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Experiência do Cliente</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Segurança</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Inovação e Futuro</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Tecnologia Trabalhando por Você</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="brain"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Pronto?</a>
-				</li>
-			</ul>
-		</div>
+			<div class="flex justify-center">
+				<ul class="mb-7 md:text-lg leading-10 text-gray-800 dark:text-gray-300 px-4 md:px-14 w-fit flex flex-col gap-2">
+					
 
-		<h1>Olá, Mundo!</h1>
-<p>Bem-vindo ao meu blog estático.</p>
+					
 
-	</main>
+					
+				</ul>
+			</div>
 
-	<footer
-									class="w-full px-8 py-16 flex justify-center bg-gray-300 dark:bg-slate-800 shadow-md border-b border-b-gray-300 dark:border-b-gray-600">
-		<div class="flex flex-col gap-5">
-			<ul class="font-semibold flex flex-col sm:flex-row justify-between items-center">
-				<li><a href="https://digiton.tech">Site Principal</a></li>
-				<li><a href="mailto:scemist.lucas@gmail.com">Contato</a></li>
-				<li><a href="mailto:scemist.lucas@gmail.com">Enviar Sugestão</a></li>
-			</ul>
+			<h1 class="text-3xl font-semibold mt-12 mb-8 text-gray-700 dark:text-gray-400">Olá, Mundo!</h1><p>Bem-vindo ao meu blog estático.</p>
 
-			<hr class="border-gray-400">
+		</main>
 
-			<p class="text-center">
+		<footer class="w-full px-8 py-16 flex justify-center bg-gray-300 dark:bg-slate-800 shadow-md border-b border-b-gray-300 dark:border-b-gray-600">
+	<div class="flex flex-col gap-5">
+		<ul class="font-semibold flex flex-col sm:flex-row justify-between items-center">
+			<li>
+				<a href="https://digiton.tech">Site Principal</a>
+			</li>
+			<li>
+				<a href="mailto:scemist.lucas@gmail.com">Contato</a>
+			</li>
+			<li>
+				<a href="mailto:scemist.lucas@gmail.com">Enviar Sugestão</a>
+			</li>
+		</ul>
+
+		<hr class="border-gray-400">
+
+		<p class="text-center">
 				Copyright © 2024 Digiton Tecnologia Consultoria em TI LTDA
-				<br>CNPJ (57.784.466/0001-42)
-			</p>
-		</div>
-	</footer>
+				<br> CNPJ (57.784.466/0001-42)
+		</p>
+	</div>
+</footer>
+		<div class="hidden w-screen h-screen fixed" id="modalFilter">
+	<div class="dismiss-menu w-full h-full items-center justify-center fixed bg-gray-800 opacity-80"></div>
+</div>
 
-	<div class="hidden w-screen h-screen fixed" id="modalFilter">
-		<div class="dismiss-menu w-full h-full items-center justify-center fixed bg-gray-800 opacity-80">
+<div class="hidden fixed top-1/2 -translate-y-1/2 z-50 rounded-lg overflow-x-hidden overflow-y-auto max-w-xl shadow" id="menuModal">
+	<div class="relative bg-gray-200 px-5 py-2 dark:bg-slate-700">
+		<div class="flex items-start justify-between p-2 border-b border-gray-400 rounded-t dark:border-gray-600 gap-20">
+			<h3 class="text-2xl text-gray-500 dark:text-white">
+				<span class="text-gray-900 dark:text-white font-semibold ml-2">Menu</span> Digiton
+			</h3>
+			<button class="dismiss-menu text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal" type="button">
+				<i data-lucide="x"></i>
+				<span class="sr-only">Close modal</span>
+			</button>
+		</div>
+
+		<div class="flex flex-col p-6 space-y-6">
+			<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Contribuir</button>
+			<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Saber Mais</button>
+			<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Materias</button>
 		</div>
 	</div>
+</div>
 
-	<div class="hidden fixed top-1/2 -translate-y-1/2 z-50 rounded-lg overflow-x-hidden overflow-y-auto max-w-xl shadow" id="menuModal">
-		<div class="relative bg-gray-200 px-5 py-2 dark:bg-slate-700">
-			<div
-								class="flex items-start justify-between p-2 border-b border-gray-400 rounded-t dark:border-gray-600 gap-20">
-				<h3 class="text-2xl text-gray-500 dark:text-white">
-					<span class="text-gray-900 dark:text-white font-semibold ml-2">Menu</span> Digiton
-				</h3>
-				<button class="dismiss-menu text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal" type="button">
-					<i data-lucide="x"></i>
-					<span class="sr-only">Close modal</span>
-				</button>
-			</div>
-
-			<div class="flex flex-col p-6 space-y-6">
-				<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Contribuir</button>
-				<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Saber Mais</button>
-				<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Materias</button>
-			</div>
-		</div>
-	</div>
-
-	<script>
-		/**
+		<script>
+			/**
  * @license lucide v0.460.0 - ISC
  *
  * This source code is licensed under the ISC license.
@@ -267,10 +234,10 @@ If you want to use all the icons you can import it like:
  \`import { createIcons, icons } from 'lucide';
 lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`createIcons()` only works in a browser environment.");const a=document.querySelectorAll(`[${o}]`);if(Array.from(a).forEach(n=>h(n,{nameAttr:o,icons:e,attrs:t})),o==="data-lucide"){const n=document.querySelectorAll("[icon-name]");n.length>0&&(console.warn("[Lucide] Some icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0 and you should switch to data-lucide"),Array.from(n).forEach(s=>h(s,{nameAttr:"icon-name",icons:e,attrs:t})))}},f={MoonStar:P,Code:N,Menu:k,PencilLine:j,Presentation:L,Play:I,Dot:S,Brain:x,X:O,Sun:B};m({icons:f});window.lucideClient={createIcons:m,icons:f};
 
-	</script>
+		</script>
 
-	<script>
-		// tailwind.config = { darkMode: 'class' }
+		<script>
+			// tailwind.config = { darkMode: 'class' }
 
 function makeDark() {
 	const themeIcon = document.querySelector('#themeIcon')
@@ -295,50 +262,57 @@ if (localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-colo
 	makeDark()
 else
 	makeLight()
-	</script>
 
-	<script>
-		// lucide.createIcons()
+const handleTheme = () => {
+	const isDark = document.documentElement.classList.contains('dark')
+	const themeIcon = document.querySelector('#themeIcon')
 
-		const toggleMenuButton = document.querySelector('#toggleMenu')
+	if (isDark) makeLight()
+	else makeDark()
 
-		const disableMenu = () => {
-			const menuModal = document.querySelector('#menuModal')
-			const modalFilter = document.querySelector('#modalFilter')
+	window.lucideClient.createIcons({ icons: window.lucideClient.icons })
+}
 
-			menuModal.classList.add('hidden')
-			modalFilter.classList.add('hidden')
-		}
+document.addEventListener('DOMContentLoaded', handleTheme)
+document.querySelector('#theme').addEventListener('click', handleTheme)
+		</script>
 
-		const enableMenu = () => {
-			const menuModal = document.querySelector('#menuModal')
-			const modalFilter = document.querySelector('#modalFilter')
+		<script>
+			const toggleMenuButton = document.querySelector('#toggleMenu')
 
-			menuModal.classList.remove('hidden')
-			modalFilter.classList.remove('hidden')
-		}
+const disableMenu = () => {
+	const menuModal = document.querySelector('#menuModal')
+	const modalFilter = document.querySelector('#modalFilter')
 
-		toggleMenuButton.onclick = () => menuModal.classList.contains('hidden') ?
-			enableMenu() :
-			disableMenu()
+	menuModal
+		.classList
+		.add('hidden')
+	modalFilter
+		.classList
+		.add('hidden')
+}
 
-		const dismissMenu = document.querySelectorAll('.dismiss-menu')
-			.forEach(element => element.onclick = disableMenu)
+const enableMenu = () => {
+	const menuModal = document.querySelector('#menuModal')
+	const modalFilter = document.querySelector('#modalFilter')
 
-		const handleTheme = () => {
-			const isDark = document.documentElement.classList.contains('dark')
-			const themeIcon = document.querySelector('#themeIcon')
+	menuModal
+		.classList
+		.remove('hidden')
+	modalFilter
+		.classList
+		.remove('hidden')
+}
 
-			if (isDark) makeLight()
-			else makeDark()
+toggleMenuButton.onclick = () => menuModal
+	.classList
+	.contains('hidden')
+	? enableMenu()
+	: disableMenu()
 
-			window.lucideClient.createIcons({icons: window.lucideClient.icons})
-		}
-
-		document.addEventListener('DOMContentLoaded', handleTheme)
-
-		document.querySelector('#theme').addEventListener('click', handleTheme)
-	</script>
-</body>
-
+const dismissMenu = document
+	.querySelectorAll('.dismiss-menu')
+	.forEach(element => element.onclick = disableMenu)
+		</script>
+	</body>
 </html>

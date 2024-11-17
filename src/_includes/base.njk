@@ -1,244 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<meta content="ie=edge" http-equiv="X-UA-Compatible">
+		<link href="favicon.svg" rel="icon">
 
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="ie=edge" http-equiv="X-UA-Compatible">
-	<link href="favicon.svg" rel="icon">
+		<meta content="index, follow" name="robots">
 
-	<meta content="index, follow" name="robots">
+		<title>{{ title }}</title>
 
-	<title>{{ title }}</title>
-	<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." name="description">
+		{% include "metatags.njk" %}
 
-	<meta content="http://digiton.tech/images/full-logo.svg" name="image">
+		<style>
+			{% addStyle 'tailwind.css' %}
+		</style>
+	</head>
 
-	<meta content="@digiton" name="twitter:site">
-	<meta content="summary_large_image" name="twitter:card">
-	<meta content="Digiton Tecnologia" name="twitter:title">
-	<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." name="twitter:description">
-	<meta content="http://digiton.tech/images/full-logo.svg" name="twitter:image:src">
+	<body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400">
+		{% include 'header.njk' %}
 
-	<meta content="http://noticias.digiton.tech/images/preview.png" property="og:image">
-	<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." property="og:image:alt">
-	<meta content="300" property="og:image:width">
-	<meta content="300" property="og:image:height">
-	<meta content="Digiton" property="og:site_name">
-	<meta content="object" property="og:type">
-	<meta content="Digiton Noticias" property="og:title">
-	<meta content="https://noticias.digiton.tech" property="og:url">
-	<meta content="Notícias, artigos, blog e tutoriais da tecnologia para seu negócio." property="og:description">
-	<meta content="noticias.digiton.tech" name="hostname">
+		<main class="max-w-3xl leading-8 px-6 lg:px-0 pb-16">
+			<section>
+				<h1 class="text-3xl font-semibold mt-3 mb-8 text-gray-700 dark:text-gray-400">
+					{{ title }}
+				</h1>
 
-	<link color="#000000" href="http://noticias.digiton.tech/images/full-logo.svg" rel="mask-icon">
-	<link href="http://noticias.digiton.tech/images/full-logo.svg" rel="fluid-icon" title="Digiton">
+				<div class="text-gray-500 flex justify-between flex-wrap gap-2 text-xs">
+					<span class="flex items-center gap-2">
+						<i class="w-7 h-7" data-lucide="pencil-line"></i>
+						De <strong>{{ date }}</strong>
+					</span>
 
-	<style>
-		{% addStyle 'tailwind.css' %}
-	</style>
-</head>
+					<span class="flex items-center gap-2">
+						<img alt="" class="w-7 h-7 border border-gray-400 rounded-full" src="{{ byPhoto }}">
+						Por <strong class="text-gray-700">{{ by }}</strong>
+					</span>
+				</div>
 
-<body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400">
-	<header
-									class="w-full py-4 flex justify-center bg-gray-100 dark:bg-slate-800 shadow-sm mb-6 border-b border-b-gray-300 dark:border-b-gray-600">
-		<nav class="max-w-2xl flex flex-1 justify-between px-6 lg:px-0">
-			<!-- <h1 class="text-2xl text-gray-800 dark:text-gray-200 font-semibold flex items-center">
-				<i class="mr-2" data-lucide="code"></i> Digiton
-			</h1> -->
+				<hr class="border-t-2 border-gray-500 mt-6 mb-6">
+			</section>
 
-			<a class="text-2xl flex items-center" href="/">
-				<img alt="Digiton News" class="h-9 mx-4 my-2" id="logoImage" src="https://noticias.digiton.tech/images/full-logo-white.svg">
-			</a>
-
-			<div class="flex items-center">
-				<button class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2" id="theme">
-					<i class="h-7 w-7" data-lucide="sun" id="themeIcon"></i>
-				</button>
-				<button class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2" id="toggleMenu">
-					<i class="h-7 w-7" data-lucide="menu"></i>
-				</button>
-			</div>
-		</nav>
-	</header>
-
-	<main class="max-w-3xl leading-8 px-6 lg:px-0 pb-16">
-		<section>
-			<h1 class="text-3xl font-semibold mt-3 mb-8 text-gray-700 dark:text-gray-400">
-				{{ title }}
-			</h1>
-
-			<div class="text-gray-500 flex justify-between flex-wrap gap-2 text-xs">
-				<span class="flex items-center gap-2">
-					<i class="w-7 h-7" data-lucide="pencil-line"></i> De
-					<strong>16/11/2024</strong>
-				</span>
-
-				<span class="flex items-center gap-2">
-					<img alt="" class="w-7 h-7 border border-gray-400 rounded-full" src="https://avatars.githubusercontent.com/u/68157089?s=150&u=abcbbc919c91cf2cd6f4bc5cb11c6db02c5f8a48&v=4">
-					Por <strong class="text-gray-700">Lucas Scemist</strong>
-				</span>
+			<div class="mb-6 text-center">
+				{% for tag in tags %}
+					<span class="rounded-md bg-blue-200 dark:bg-blue-500 dark:bg-opacity-70 text-blue-600 dark:text-blue-300 text-sm py-1 px-2 mx-3">{{ tag }}</span>
+				{% endfor %}
 			</div>
 
-			<hr class="border-t-2 border-gray-500 mt-6 mb-6">
-		</section>
+			<div class="relative font-semibold tracking-wide mb-10 overflow-hidden rounded-md shadow border border-gray-400 dark:border-gray-800">
+				<div class="h-52 md:h-80 relative overflow-hidden">
+					<img alt="Imagem Ilustrativa de Código." class="absolute min-w-full top-1/2 -translate-y-1/2" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+				</div>
 
-		<div class="mb-6 text-center">
-			<span class="rounded-md bg-blue-200 dark:bg-blue-500 dark:bg-opacity-70 text-blue-600 dark:text-blue-300 text-sm py-1 px-2 mx-3">Varejo</span>
-			<span class="rounded-md bg-blue-200 dark:bg-blue-500 dark:bg-opacity-70 text-blue-600 dark:text-blue-300 text-sm py-1 px-2 mx-3">Negócios</span>
-		</div>
+				<div class="absolute top-3 right-3 text-gray-700">
+					<i data-lucide="presentation"></i>
+				</div>
 
-		<div
-							class="relative font-semibold tracking-wide mb-10 overflow-hidden rounded-md shadow border border-gray-400 dark:border-gray-800">
-			<div class="h-52 md:h-80 relative overflow-hidden">
-				<img alt="Imagem Ilustrativa de Código." class="absolute min-w-full top-1/2 -translate-y-1/2" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+				<div class="text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-slate-800 rounded md:text-lg leading-7 md:leading-8 pt-9 pb-12 px-8">
+					<hr class="mt-0 border-y-2 w-40 mx-auto mb-7 rounded border-slate-500">
+
+					<p>{{ prelude }}</p>
+				</div>
 			</div>
 
-			<div class="absolute top-3 right-3 text-gray-700"><i data-lucide="presentation"></i></div>
+			<div class="flex justify-center">
+				<ul class="mb-7 md:text-lg leading-10 text-gray-800 dark:text-gray-300 px-4 md:px-14 w-fit flex flex-col gap-2">
+					{# <li class="flex items-center">
+						<i class="h-5 mr-4 text-gray-400" data-lucide="play"></i>
+						<a class="hover:text-zinc-500" href="#o-que-e-devops">Como Você Ganha?</a>
+					</li> #}
 
-			<div class="text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-slate-800 rounded md:text-lg leading-7 md:leading-8 pt-9 pb-12 px-8">
-				<hr class="mt-0 border-y-2 w-40 mx-auto mb-7 rounded border-slate-500">
+					{% for topic in topics %}
+						<li class="flex items-center">
+							<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
+							<a class="hover:text-zinc-500" href="#{{ topic }}">{{ topic }}</a>
+						</li>
+					{% endfor %}
 
-				<p>
-					No mundo dinâmico do varejo, onde as mudanças acontecem em um piscar de olhos, a tecnologia deixou de ser apenas um suporte e se tornou protagonista. Mas a pergunta é: sua empresa está realmente aproveitando tudo o que a tecnologia pode oferecer? Se a resposta for “não sei” ou “ainda não”, você está no lugar certo! Vamos explorar como uma consultoria em TI pode ser o motor que levará sua empresa de varejo para o próximo nível.
-				</p>
-			</div>
-		</div>
-
-		<div class="flex justify-center">
-			<ul class="mb-7 md:text-lg leading-10 text-gray-800 dark:text-gray-300 px-4 md:px-14 w-fit flex flex-col gap-2">
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="play"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Como Você Ganha?</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Suas Necessidades</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Modernizando sua Operação</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Experiência do Cliente</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Segurança</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Inovação e Futuro</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Tecnologia Trabalhando por Você</a>
-				</li>
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="brain"></i>
-					<a class="hover:text-zinc-500" href="#o-que-e-devops">Pronto?</a>
-				</li>
-			</ul>
-		</div>
-
-		{{ content | safe }}
-	</main>
-
-	<footer
-									class="w-full px-8 py-16 flex justify-center bg-gray-300 dark:bg-slate-800 shadow-md border-b border-b-gray-300 dark:border-b-gray-600">
-		<div class="flex flex-col gap-5">
-			<ul class="font-semibold flex flex-col sm:flex-row justify-between items-center">
-				<li><a href="https://digiton.tech">Site Principal</a></li>
-				<li><a href="mailto:scemist.lucas@gmail.com">Contato</a></li>
-				<li><a href="mailto:scemist.lucas@gmail.com">Enviar Sugestão</a></li>
-			</ul>
-
-			<hr class="border-gray-400">
-
-			<p class="text-center">
-				Copyright © 2024 Digiton Tecnologia Consultoria em TI LTDA
-				<br>CNPJ (57.784.466/0001-42)
-			</p>
-		</div>
-	</footer>
-
-	<div class="hidden w-screen h-screen fixed" id="modalFilter">
-		<div class="dismiss-menu w-full h-full items-center justify-center fixed bg-gray-800 opacity-80">
-		</div>
-	</div>
-
-	<div class="hidden fixed top-1/2 -translate-y-1/2 z-50 rounded-lg overflow-x-hidden overflow-y-auto max-w-xl shadow" id="menuModal">
-		<div class="relative bg-gray-200 px-5 py-2 dark:bg-slate-700">
-			<div
-								class="flex items-start justify-between p-2 border-b border-gray-400 rounded-t dark:border-gray-600 gap-20">
-				<h3 class="text-2xl text-gray-500 dark:text-white">
-					<span class="text-gray-900 dark:text-white font-semibold ml-2">Menu</span> Digiton
-				</h3>
-				<button class="dismiss-menu text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal" type="button">
-					<i data-lucide="x"></i>
-					<span class="sr-only">Close modal</span>
-				</button>
+					{# <li class="flex items-center">
+						<i class="h-5 mr-4 text-gray-400" data-lucide="brain"></i>
+						<a class="hover:text-zinc-500" href="#o-que-e-devops">Pronto?</a>
+					</li> #}
+				</ul>
 			</div>
 
-			<div class="flex flex-col p-6 space-y-6">
-				<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Contribuir</button>
-				<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Saber Mais</button>
-				<button class="text-base leading-relaxed text-gray-500 dark:text-gray-400">Materias</button>
-			</div>
-		</div>
-	</div>
+			{{ content | safe }}
+		</main>
 
-	<script>
-		{% addScript 'build/lucide-icons.js' %}
-	</script>
+		{% include 'footer.njk' %}
+		{% include 'menu.njk' %}
 
-	<script>
-		{% addScript 'load-theme.js' %}
-	</script>
+		<script>
+			{% addScript 'build/lucide-icons.js' %}
+		</script>
 
-	<script>
-		// lucide.createIcons()
+		<script>
+			{% addScript 'load-theme.js' %}
+		</script>
 
-		const toggleMenuButton = document.querySelector('#toggleMenu')
-
-		const disableMenu = () => {
-			const menuModal = document.querySelector('#menuModal')
-			const modalFilter = document.querySelector('#modalFilter')
-
-			menuModal.classList.add('hidden')
-			modalFilter.classList.add('hidden')
-		}
-
-		const enableMenu = () => {
-			const menuModal = document.querySelector('#menuModal')
-			const modalFilter = document.querySelector('#modalFilter')
-
-			menuModal.classList.remove('hidden')
-			modalFilter.classList.remove('hidden')
-		}
-
-		toggleMenuButton.onclick = () => menuModal.classList.contains('hidden') ?
-			enableMenu() :
-			disableMenu()
-
-		const dismissMenu = document.querySelectorAll('.dismiss-menu')
-			.forEach(element => element.onclick = disableMenu)
-
-		const handleTheme = () => {
-			const isDark = document.documentElement.classList.contains('dark')
-			const themeIcon = document.querySelector('#themeIcon')
-
-			if (isDark) makeLight()
-			else makeDark()
-
-			window.lucideClient.createIcons({icons: window.lucideClient.icons})
-		}
-
-		document.addEventListener('DOMContentLoaded', handleTheme)
-
-		document.querySelector('#theme').addEventListener('click', handleTheme)
-	</script>
-</body>
-
+		<script>
+			{% addScript 'nav.js' %}
+		</script>
+	</body>
 </html>

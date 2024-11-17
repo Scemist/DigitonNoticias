@@ -23,3 +23,16 @@ if (localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-colo
 	makeDark()
 else
 	makeLight()
+
+const handleTheme = () => {
+	const isDark = document.documentElement.classList.contains('dark')
+	const themeIcon = document.querySelector('#themeIcon')
+
+	if (isDark) makeLight()
+	else makeDark()
+
+	window.lucideClient.createIcons({ icons: window.lucideClient.icons })
+}
+
+document.addEventListener('DOMContentLoaded', handleTheme)
+document.querySelector('#theme').addEventListener('click', handleTheme)

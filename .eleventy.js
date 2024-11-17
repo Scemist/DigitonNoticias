@@ -3,10 +3,15 @@ import path from 'path';
 import markdownIt from 'markdown-it';
 import markdownItAttrs from 'markdown-it-attrs';
 
+import headings from "./src/_includes/markdown/headings.js";
+
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 export default function (eleventyConfig) {
 	const markdownLib = markdownIt({ html: true }).use(markdownItAttrs);
+
+	headings(markdownLib)
+
 	eleventyConfig.setLibrary('md', markdownLib);
 
 	eleventyConfig.addShortcode('addStyle', function (fileName) {
