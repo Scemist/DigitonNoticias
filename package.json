@@ -1,24 +1,27 @@
 {
-  "name": "handbook",
+  "name": "digiton-noticias",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "description": "Notícias e Artigos em noticias.digiton.tech",
+  "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Scemist/handbook.git"
+    "url": "git+https://github.com/Scemist/DigitonNoticias.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "digiton.tech",
+    "noticias.digiton.tech"
+  ],
+  "author": "Lucas Scemist",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Scemist/handbook/issues"
+    "url": "https://github.com/Scemist/DigitonNoticias/issues"
   },
-  "homepage": "https://github.com/Scemist/handbook#readme",
+  "homepage": "https://github.com/Scemist/DigitonNoticias#readme",
+  "type": "module",
   "dependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.27",
-    "tailwindcss": "^3.3.3"
+    "@11ty/eleventy": "^3.0.0"
   }
 }
