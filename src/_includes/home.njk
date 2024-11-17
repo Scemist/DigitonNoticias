@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<meta content="ie=edge" http-equiv="X-UA-Compatible">
+		<link href="favicon.svg" rel="icon">
+
+		<meta content="index, follow" name="robots">
+
+		<title>{{ title }}</title>
+
+		{% include "metatags.njk" %}
+
+		<style>
+			{% addStyle 'tailwind.css' %}
+		</style>
+	</head>
+
+	<body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400">
+		{% include 'header.njk' %}
+
+		<main class="max-w-3xl leading-8 px-6 lg:px-0 pb-16">
+			<section>
+				<h1 class="text-3xl font-semibold mt-3 mb-8 text-gray-700 dark:text-gray-400">
+					{{ title }}
+				</h1>
+
+				<hr class="border-t-2 border-gray-500 mt-6 mb-6">
+			</section>
+
+			{{ content | safe }}
+
+			<ul class="mb-7 md:text-lg leading-10 text-gray-800 dark:text-gray-300 px-4 md:px-14 w-fit flex flex-col gap-2">
+			{% for post in collections.posts %}
+				<li class="flex items-center">
+					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
+					<a class="hover:text-zinc-500" href="{{ post.url }}">{{ post.data.title }}</a>
+				</li>
+			{% endfor %}
+			</ul>
+		</main>
+
+		{% include 'footer.njk' %}
+		{% include 'menu.njk' %}
+
+		<script>
+			{% addScript 'build/lucide-icons.js' %}
+		</script>
+
+		<script>
+			{% addScript 'load-theme.js' %}
+		</script>
+
+		<script>
+			{% addScript 'nav.js' %}
+		</script>
+	</body>
+</html>
