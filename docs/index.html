@@ -39,20 +39,21 @@
 		tailwind.config = { darkMode: 'class' }
 
 		const makeDark = () => {
-			const themeButon = document.querySelector('#theme')
+			const themeIcon = document.querySelector('#themeIcon')
 			const logoImage = document.querySelector('#logoImage')
 			document.documentElement.classList.add('dark')
 			localStorage.setItem('theme', 'dark')
-			themeButon?.setAttribute('data-lucide', 'moon-star')
+			themeIcon && (themeIcon.outerHTML = '<span><i data-lucide="moon-star" id="themeIcon" class="h-7 w-7"></i></span>')
 			logoImage && (logoImage.src = 'https://noticias.digiton.tech/images/full-logo-white.svg')
 		}
 
 		const makeLight = () => {
-			const themeButon = document.querySelector('#theme')
+			const themeIcon = document.querySelector('#themeIcon')
 			const logoImage = document.querySelector('#logoImage')
 			document.documentElement.classList.remove('dark')
 			localStorage.setItem('theme', 'dark')
-			themeButon?.setAttribute('data-lucide', 'sun')
+			themeIcon?.setAttribute('data-lucide', 'sun')
+			themeIcon && (themeIcon.outerHTML = '<span><i data-lucide="sun" id="themeIcon" class="h-7 w-7"></i></span>')
 			logoImage && (logoImage.src = 'https://noticias.digiton.tech/images/full-logo.svg')
 		}
 
@@ -74,13 +75,14 @@
 			</h1> -->
 
 			<a class="text-2xl flex items-center" href="/">
-				<img id="logoImage" alt="Digiton News" class="h-9 mx-4 my-2" src="https://noticias.digiton.tech/images/full-logo-white.svg">
+				<img id="logoImage" alt="Digiton News" class="h-9 mx-4 my-2"
+					 src="https://noticias.digiton.tech/images/full-logo-white.svg">
 			</a>
 
 			<div class="flex items-center">
 				<button id="theme"
 						class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2">
-					<i data-lucide="sun" class="h-7 w-7"></i>
+					<i data-lucide="sun" id="themeIcon" class="h-7 w-7"></i>
 				</button>
 				<button class="text-gray-800 dark:text-gray-300 p-2 rounded dark:hover:bg-zinc-900 dark:hover:shadow mx-2"
 						id="toggleMenu">
@@ -295,32 +297,18 @@
 			.forEach(element => element.onclick = disableMenu)
 
 		const handleTheme = () => {
-			const localStorageTheme = localStorage.getItem('color-theme')
-			const mediaThemeIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
 			const isDark = document.documentElement.classList.contains('dark')
-			const themeButon = document.querySelector('#theme')
+			const themeIcon = document.querySelector('#themeIcon')
 
-			if (isDark)
-				themeButon.setAttribute('data-lucide', 'moon-star')
+			if (isDark) makeLight()
+			else makeDark()
 
-			// if (
-			// 	localStorageTheme === 'dark' ||
-			// 	(!('color-theme' in localStorage) && mediaThemeIsDark)
-			// )
-
-			document.documentElement.classList.add('dark');
+			lucide.createIcons([themeIcon])
 		}
 
 		document.addEventListener('DOMContentLoaded', handleTheme)
 
-		const themeButon = document.querySelector('#theme')
-		themeButon.addEventListener('click', () => {
-			const isDark = document.documentElement.classList.contains('dark')
-			if (isDark) makeLight()
-			else makeDark()
-		})
-
+		document.querySelector('#theme').addEventListener('click', handleTheme)
 	</script>
 </body>
 
