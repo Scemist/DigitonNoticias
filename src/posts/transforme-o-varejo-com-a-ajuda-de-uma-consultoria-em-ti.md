@@ -1,7 +1,6 @@
 ---
 layout: base.njk
-title: Transforme o Varejo com a Ajuda de uma Consultoria em TI
+title: Bem-vindo ao Blog
 ---
-
 # Olá, Mundo!
 Bem-vindo ao meu blog estático.

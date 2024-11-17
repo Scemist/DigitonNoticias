@@ -1,27 +1,44 @@
 {
-  "name": "digiton-noticias",
-  "version": "1.0.0",
-  "description": "Notícias e Artigos em noticias.digiton.tech",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Scemist/DigitonNoticias.git"
-  },
-  "keywords": [
-    "digiton.tech",
-    "noticias.digiton.tech"
-  ],
-  "author": "Lucas Scemist",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Scemist/DigitonNoticias/issues"
-  },
-  "homepage": "https://github.com/Scemist/DigitonNoticias#readme",
-  "type": "module",
-  "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
-  }
+	"name": "digiton-noticias",
+	"version": "1.0.0",
+	"description": "Notícias e Artigos em noticias.digiton.tech",
+	"main": "index.js",
+	"scripts": {
+		"tailwind:build": "tailwindcss -i ./src/styles/tailwind.css -o ./docs/styles/tailwind.css --minify",
+		"tailwind:watch": "tailwindcss -i ./src/styles/tailwind.css -o ./docs/styles/tailwind.css --watch",
+		"eleventy:build": "eleventy",
+		"eleventy:watch": "eleventy --serve",
+		"vite:build": "vite build",
+		"vite:watch": "vite build --watch",
+		"build": "npm run vite:build && npm run tailwind:build && npm run eleventy:build",
+		"watch": "concurrently \"npm run tailwind:watch\" \"npm run eleventy:watch\" \"npm run vite:watch\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Scemist/DigitonNoticias.git"
+	},
+	"keywords": [
+		"digiton.tech",
+		"noticias.digiton.tech"
+	],
+	"author": "Lucas Scemist",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Scemist/DigitonNoticias/issues"
+	},
+	"homepage": "https://github.com/Scemist/DigitonNoticias#readme",
+	"type": "module",
+	"dependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"autoprefixer": "^10.4.20",
+		"lucide": "^0.460.0",
+		"markdown-it": "^14.1.0",
+		"postcss": "^8.4.49",
+		"tailwindcss": "^3.4.15",
+		"vite": "^5.4.11"
+	},
+	"devDependencies": {
+		"concurrently": "^9.1.0",
+		"markdown-it-attrs": "^4.2.0"
+	}
 }
