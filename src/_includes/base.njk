@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
 		<meta content="ie=edge" http-equiv="X-UA-Compatible">
-		<link href="favicon.svg" rel="icon">
+		<link href="/favicon.svg" rel="icon">
 
 		<meta content="index, follow" name="robots">
 
@@ -22,11 +22,17 @@
 
 		<main class="max-w-3xl leading-8 px-6 lg:px-0 pb-16">
 			<section>
-				<h1 class="text-3xl font-semibold mt-3 mb-8 text-gray-700 dark:text-gray-400">
+				<h1 class="text-4xl font-bold leading-relaxed mt-3 text-gray-700 dark:text-gray-400">
 					{{ title }}
 				</h1>
 
-				<div class="text-gray-500 flex justify-between flex-wrap gap-2 text-xs">
+				<div class="mt-7">
+					<span class="text-sm">
+						Escrito por {{ by }} em {{ date }}
+					<span>
+				</div>
+
+				{# <div class="text-gray-500 mt-8 flex justify-between flex-wrap gap-2 text-xs">
 					<span class="flex items-center gap-2">
 						<i class="w-7 h-7" data-lucide="pencil-line"></i>
 						De <strong>{{ date }}</strong>
@@ -36,18 +42,18 @@
 						<img alt="" class="w-7 h-7 border border-gray-400 rounded-full" src="{{ byPhoto }}">
 						Por <strong class="text-gray-700">{{ by }}</strong>
 					</span>
-				</div>
+				</div> #}
 
-				<hr class="border-t-2 border-gray-500 mt-6 mb-6">
+				{# <hr class="border-t-2 border-gray-500 mt-6 mb-6"> #}
 			</section>
 
-			<div class="mb-6 text-center">
+			<div class="mt-2 mb-6 text-center">
 				{% for tag in tags %}
 					<span class="rounded-md bg-blue-200 dark:bg-blue-500 dark:bg-opacity-70 text-blue-600 dark:text-blue-300 text-sm py-1 px-2 mx-3">{{ tag }}</span>
 				{% endfor %}
 			</div>
 
-			<div class="relative font-semibold tracking-wide mb-10 overflow-hidden rounded-md shadow border border-gray-400 dark:border-gray-800">
+			<div class="relative font-semibold tracking-wide mb-10 overflow-hidden rounded-md shadow-sm">
 				<div class="h-52 md:h-80 relative overflow-hidden">
 					<img alt="Imagem Ilustrativa de Código." class="absolute min-w-full top-1/2 -translate-y-1/2" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
 				</div>
@@ -56,7 +62,7 @@
 					<i data-lucide="presentation"></i>
 				</div>
 
-				<div class="text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-slate-800 rounded md:text-lg leading-7 md:leading-8 pt-9 pb-12 px-8">
+				<div class="text-gray-600 dark:text-gray-400 bg-slate-300 dark:bg-slate-800 rounded md:text-lg leading-7 md:leading-8 pt-9 pb-12 px-12">
 					<hr class="mt-0 border-y-2 w-40 mx-auto mb-7 rounded border-slate-500">
 
 					<p>{{ prelude }}</p>
