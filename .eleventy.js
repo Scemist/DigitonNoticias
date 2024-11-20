@@ -46,6 +46,7 @@ export default function (eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy('./src/scripts');
 	eleventyConfig.addPassthroughCopy('./src/images');
+	eleventyConfig.addPassthroughCopy('./src/styles/fonts');
 
 	return {
 		dir: {
