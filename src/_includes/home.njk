@@ -22,16 +22,16 @@
 
 		<main class="max-w-3xl leading-8 px-6 lg:px-0 pb-16">
 			<section>
-				<h1 class="text-3xl font-semibold mt-3 mb-8 text-gray-700 dark:text-gray-400">
+				<h1 class="text-3xl font-semibold mt-3 text-gray-700 dark:text-gray-400">
 					{{ title }}
 				</h1>
 
-				<hr class="border-t-2 border-gray-500 mt-6 mb-6">
+				<hr class="border-t-2 border-gray-400 dark:border-gray-600 mt-4 mb-6">
 			</section>
 
 			{{ content | safe }}
 
-			<ul class="mb-7 md:text-lg leading-10 text-gray-800 dark:text-gray-300 px-4 md:px-14 w-fit flex flex-col gap-2">
+			<ul class="mb-7 md:text-lg leading-8 text-gray-800 dark:text-gray-300 px-4 md:px-14 w-fit flex flex-col gap-5">
 			{% for post in collections.posts %}
 				<li class="flex items-center">
 					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>

@@ -20,6 +20,6 @@ export default (markdownLib) => {
 	};
 
 	markdownLib.renderer.rules.heading_close = (tokens, idx) => {
-		return `<hr class="border-t border-gray-300 mt-2"></${tokens[idx].tag}>`;
+		return `<hr class="border-t border-gray-300 dark:border-gray-700 mt-2"></${tokens[idx].tag}>`;
 	};
 };

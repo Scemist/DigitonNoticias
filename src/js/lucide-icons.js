@@ -11,6 +11,7 @@ const lucideIcons = {
 	Brain: icons.Brain,
 	X: icons.X,
 	Sun: icons.Sun,
+	Circle: icons.Circle,
 }
 
 createIcons({ icons: lucideIcons })
