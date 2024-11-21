@@ -33,9 +33,13 @@
 
 			<ul class="mb-7 md:text-lg leading-8 text-gray-800 dark:text-gray-300 px-4 md:px-14 w-fit flex flex-col gap-5">
 			{% for post in collections.posts %}
-				<li class="flex items-center">
-					<i class="h-5 mr-4 text-gray-400" data-lucide="dot"></i>
-					<a class="hover:text-zinc-500" href="{{ post.url }}">{{ post.data.title }}</a>
+					<li class="flex gap-2">
+						<div class="h-7 py-1 text-gray-400">
+							<i data-lucide="dot"></i>
+						</div>
+					<div>
+						<a class="hover:text-zinc-500" href="{{ post.url }}">{{ post.data.title }}</a>
+					<div>
 				</li>
 			{% endfor %}
 			</ul>

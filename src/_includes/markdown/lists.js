@@ -8,10 +8,15 @@ export default (markdownLib) => {
 	};
 
 	markdownLib.renderer.rules.list_item_open = (tokens, idx, options, env, self) => {
-		return `<li class="flex"><i class="h-32 w-32 text-gray-400 mr-4" data-lucide="dot"></i>`;
+		return `
+			<li class="flex gap-2">
+				<div class="h-7 py-1 text-gray-400">
+					<i data-lucide="dot"></i>
+				</div>
+				<div>`;
 	};
 
-	// markdownLib.renderer.rules.list_item_close = (tokens, idx) => {
-	// 	return `<li class="">`;
-	// };
+	markdownLib.renderer.rules.list_item_close = (tokens, idx) => {
+		return `</div></li>`;
+	};
 };

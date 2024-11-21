@@ -2,6 +2,7 @@
 layout: 'base.njk'
 title: 'DevOps: Mais que um papel, uma mudança de cultura e de entrega de valor'
 prelude: 'A proposta do DevOps permite uma maior transparência e eficiência, garantindo não apenas redução de gargalos e silos de comunicação, mas uma força competitiva no mercado. De forma geral, o modelo DevOps apresenta quatro grandes pilares'
+photo: 'https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80'
 date: '2023-06-12'
 by: 'Lucas Scemist'
 byPhoto: 'https://avatars.githubusercontent.com/u/68157089?s=150&u=abcbbc919c91cf2cd6f4bc5cb11c6db02c5f8a48&v=4'

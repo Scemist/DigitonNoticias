@@ -19,6 +19,6 @@ topics:
   - Pronto?
 ---
 
-## Este site é seu livro de mão e referência para te guiar meio ao mundo digital em seu negócio.
+### Este site é seu livro de mão e referência para te guiar meio ao mundo digital em seu negócio.
 
-### Acervo de Artigos
+#### Acervo de Artigos
