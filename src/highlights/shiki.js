@@ -21,7 +21,7 @@ export default function addShikiMarkdownHighlighter(eleventyConfig) {
 		}).replace(
 			/<pre class="shiki[^"]+"/,
 			'<pre class="shiki w-max rounded shadow leading-5 min-w-full'
-			+ ' dark:border dark:border-slate-600'
+			+ ' dark:border-2 dark:border-slate-700'
 			+ ' text-sm py-4 px-6 md:py-8 md:px-10"'
 		);
 

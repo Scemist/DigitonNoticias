@@ -8,7 +8,7 @@ const lucideIcons = {
 	Presentation: icons.Presentation,
 	Play: icons.Play,
 	Dot: icons.Dot,
-	Brain: icons.Brain,
+	BrainCircuit: icons.BrainCircuit,
 	X: icons.X,
 	Sun: icons.Sun,
 	Circle: icons.Circle,
