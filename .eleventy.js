@@ -6,9 +6,7 @@ import markdownItAttrs from 'markdown-it-attrs';
 import headings from "./src/_includes/markdown/headings.js";
 import paragraphs from "./src/_includes/markdown/paragraphs.js";
 import lists from "./src/_includes/markdown/lists.js";
-
-import highlighter from './src/highlights/shiki.js'
-
+import codes from "./src/_includes/markdown/codes.js";
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
@@ -17,37 +15,36 @@ export default function (eleventyConfig) {
 	headings(markdownLib)
 	lists(markdownLib)
 	paragraphs(markdownLib)
+	codes(markdownLib)
 	eleventyConfig.setLibrary('md', markdownLib);
 
-	eleventyConfig.addCollection("posts", function (collectionApi) {
-		return collectionApi.getFilteredByGlob("src/posts/*.md");
-	});
+	eleventyConfig.addCollection(
+		'posts',
+		(collectionApi) => collectionApi.getFilteredByGlob('src/posts/*.md')
+	);
 
-	eleventyConfig.addCollection("highlights", function (collectionApi) {
-		return collectionApi.getFilteredByGlob("src/posts/*.md");
-	});
+	eleventyConfig.addCollection(
+		'highlights',
+		(collectionApi) => collectionApi.getFilteredByGlob('src/posts/*.md')
+	);
 
 	eleventyConfig.addShortcode('addStyle', function (fileName) {
 		const fullPath = path.join(__dirname, 'docs', 'styles', fileName);
 
-		if (fs.existsSync(fullPath)) {
-			return fs.readFileSync(fullPath, 'utf8');
-		} else {
-			return `/* CSS file not found: ${fileName} */`;
-		}
+		if (fs.existsSync(fullPath))
+			return fs.readFileSync(fullPath, 'utf8')
+
+		return `/* CSS file not found: ${fileName} */`;
 	});
 
 	eleventyConfig.addShortcode('addScript', function (filePath) {
 		const fullPath = path.join(__dirname, 'src', 'scripts', filePath);
 
-		if (fs.existsSync(fullPath)) {
-			return fs.readFileSync(fullPath, 'utf8');
-		} else {
-			return `/* JS file not found: ${filePath} */`;
-		}
-	});
+		if (fs.existsSync(fullPath))
+			return fs.readFileSync(fullPath, 'utf8')
 
-	highlighter(eleventyConfig)
+		return `/* JS file not found: ${filePath} */`
+	});
 
 	eleventyConfig.addPassthroughCopy('./src/scripts');
 	eleventyConfig.addPassthroughCopy('./src/images');
