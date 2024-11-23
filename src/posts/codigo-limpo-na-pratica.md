@@ -19,6 +19,7 @@ topics:
   - Organize seu Código em Funções e Classes Coesas
   - Use o Padrão PSR
   - Conclusão
+icon: sparkles
 ---
 
 A busca por Clean Code (Código Limpo) é um dos principais objetivos dos desenvolvedores modernos. Um código bem estruturado não só facilita a manutenção e o entendimento, mas também contribui para o aumento da produtividade e a colaboração eficaz entre equipes. Neste artigo, vamos abordar como implementar práticas de Clean Code no PHP, com exemplos práticos de refatoração e boas práticas.

@@ -20,10 +20,10 @@
 	<body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400">
 		{% include 'header.njk' %}
 
-		<main class="max-w-3xl leading-8 px-6 lg:px-0 pb-16">
+		<main class="max-w-full sm:max-w-3xl leading-8 px-6 lg:px-0 pb-16">
 			<section>
 				<h1 class="text-3xl font-semibold mt-3 text-gray-700 dark:text-gray-400">
-					{{ title }}
+					<i data-lucide="newspaper" class="inline"></i> {{ title }}
 				</h1>
 
 				<hr class="border-t-2 border-gray-400 dark:border-gray-600 mt-4 mb-6">
@@ -31,16 +31,15 @@
 
 			{{ content | safe }}
 
-			<ul class="mb-7 md:text-lg leading-8 text-gray-800 dark:text-gray-300 px-4 md:px-14 w-fit flex flex-col gap-5">
-			{% for post in collections.posts %}
-					<li class="flex gap-2">
-						<div class="h-7 py-1 text-gray-400">
-							<i data-lucide="dot"></i>
-						</div>
-					<div>
-						<a class="hover:text-zinc-500" href="{{ post.url }}">{{ post.data.title }}</a>
-					<div>
-				</li>
+			<ul class="mb-7 md:text-lg leading-8 text-gray-800 dark:text-gray-300 mx-0 px-0 w-full flex flex-col gap-5">
+				{% for post in collections.posts %}
+				<a class="hover:text-zinc-500 border dark:border-gray-700 shadow-sm bg-gray-100 dark:bg-slate-800 px-8 py-6 rounded-lg flex flex-col gap-4" href="{{ post.url }}">
+					<span class="font-semibold">{{ post.data.title }}</span>
+
+					<div class="text-zinc-500 text-sm truncate">
+						{{ post.data.prelude }}
+					</div>
+				</a>
 			{% endfor %}
 			</ul>
 		</main>

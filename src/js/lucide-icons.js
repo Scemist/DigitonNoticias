@@ -12,6 +12,9 @@ const lucideIcons = {
 	X: icons.X,
 	Sun: icons.Sun,
 	Circle: icons.Circle,
+	Newspaper: icons.Newspaper,
+	LibraryBig: icons.LibraryBig,
+	Sparkles: icons.Sparkles,
 }
 
 createIcons({ icons: lucideIcons })
