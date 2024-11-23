@@ -7,6 +7,9 @@ import headings from "./src/_includes/markdown/headings.js";
 import paragraphs from "./src/_includes/markdown/paragraphs.js";
 import lists from "./src/_includes/markdown/lists.js";
 
+import highlighter from './src/highlights/shiki.js'
+
+
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 export default function (eleventyConfig) {
@@ -43,6 +46,8 @@ export default function (eleventyConfig) {
 			return `/* JS file not found: ${filePath} */`;
 		}
 	});
+
+	highlighter(eleventyConfig)
 
 	eleventyConfig.addPassthroughCopy('./src/scripts');
 	eleventyConfig.addPassthroughCopy('./src/images');

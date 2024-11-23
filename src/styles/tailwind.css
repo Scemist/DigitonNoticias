@@ -3,15 +3,22 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'OpenSans';
-	src: url('/styles/fonts/opensans.ttf') format('truetype');
-	font-weight: 100 900; /* Define the range of weights available */
-	font-style: normal;
-  }
+    font-family: 'OpenSans';
+    src: url('/styles/fonts/opensans.ttf') format('truetype');
+    font-weight: 100 900; /* Define the range of weights available */
+    font-style: normal;
+}
 
 @font-face {
-	font-family: 'OpenSans';
-	src: url('/styles/fonts/opensans-italic.ttf') format('truetype');
-	font-weight: 100 900; /* Same weight range */
-	font-style: italic;
+    font-family: 'OpenSans';
+    src: url('/styles/fonts/opensans-italic.ttf') format('truetype');
+    font-weight: 100 900; /* Same weight range */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('/styles/fonts/fira-code.ttf') format('truetype');
+    font-weight: 100 900; /* Same weight range */
+    font-style: normal;
 }
