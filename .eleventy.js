@@ -46,6 +46,14 @@ export default function (eleventyConfig) {
 		return `/* JS file not found: ${filePath} */`
 	});
 
+	eleventyConfig.addFilter("formatDate", (date) => {
+		const d = new Date(date);
+		const day = String(d.getDate()).padStart(2, "0");
+		const month = String(d.getMonth() + 1).padStart(2, "0"); // Mês é zero-indexado
+		const year = d.getFullYear();
+		return `${day}/${month}/${year}`;
+	});
+
 	eleventyConfig.addPassthroughCopy('./src/scripts');
 	eleventyConfig.addPassthroughCopy('./src/images');
 	eleventyConfig.addPassthroughCopy('./src/styles/fonts');

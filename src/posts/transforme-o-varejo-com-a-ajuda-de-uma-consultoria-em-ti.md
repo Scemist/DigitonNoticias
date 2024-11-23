@@ -1,11 +1,12 @@
 ---
 layout: 'base.njk'
 title: 'Transforme o Varejo com a Ajuda de uma Consultoria em TI'
-prelude: 'No mundo dinâmico do varejo, onde as mudanças acontecem em um piscar de olhos, a tecnologia deixou de ser apenas um suporte e se tornou protagonista. Mas a pergunta é: sua empresa está realmente aproveitando tudo o que a tecnologia pode oferecer? Se a resposta for “não sei” ou “ainda não”, você está no lugar certo! Vamos explorar como uma consultoria em TI pode ser o motor que levará sua empresa de varejo para o próximo nível.'
+prelude: 'No varejo, onde as mudanças são rápidas, a tecnologia deixou de ser suporte para ser protagonista. Mas sua empresa está aproveitando todo o potencial que a tecnologia pode oferecer? Se a resposta for "não sei" ou "ainda não", uma consultoria em TI pode ser o impulso necessário para levar seu negócio ao próximo nível.'
 date: '2024-11-16'
 photo: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 by: 'Lucas Scemist'
 byPhoto: 'https://avatars.githubusercontent.com/u/68157089?s=150&u=abcbbc919c91cf2cd6f4bc5cb11c6db02c5f8a48&v=4'
+byLink: 'https://www.linkedin.com/in/scemist'
 tags:
   - Varejo
   - Negócios

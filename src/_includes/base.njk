@@ -14,7 +14,7 @@
 		</style>
 	</head>
 
-	<body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400 w-[100vw]">
+	<body class="bg-gray-200 dark:bg-slate-900 flex flex-col items-center text-gray-600 dark:text-gray-400 w-[100vw] transition-all">
 		{% include 'header.njk' %}
 
 		<main class="max-w-full sm:max-w-3xl leading-8 px-6 lg:px-0 pb-16">
@@ -24,7 +24,7 @@
 				</h1>
 
 				<div class="mt-7 text-center text-sm">
-					Escrito por {{ by }} em {{ date }}
+					Escrito por <a href="{{ byLink }}" class="font-semibold">{{ by }}</a> em {{ date | formatDate }}
 				</div>
 
 				{# <div class="text-gray-500 mt-8 flex justify-between flex-wrap gap-2 text-xs">
@@ -57,7 +57,7 @@
 					<i data-lucide="presentation"></i>
 				</div>
 
-				<div class="text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-slate-800 rounded md:text-lg leading-7 md:leading-8 pt-9 pb-12 px-12">
+				<div class="text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-slate-800 rounded-b md:text-lg leading-7 md:leading-8 pt-9 pb-12 px-12">
 					<hr class="mt-0 border-y-2 w-40 mx-auto mb-7 rounded border-slate-300 dark:border-slate-600">
 
 					<p>{{ prelude }}</p>
