@@ -25,6 +25,6 @@ export default function addShikiMarkdownHighlighter(eleventyConfig) {
 			+ ' text-sm py-4 px-6 md:py-8 md:px-10"'
 		);
 
-		return `<div class="overflow-x-auto w-full min-w-full max-w-full">${highlighted}</div>`
+		return `<div class="overflow-x-auto w-full min-w-full max-w-full mb-4">${highlighted}</div>`
 	});
 }
