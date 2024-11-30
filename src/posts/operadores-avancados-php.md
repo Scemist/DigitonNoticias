@@ -1,7 +1,7 @@
 ---
 layout: 'base.njk'
 title: 'Operadores de Comparação Avançados no PHP'
-prelude: 'Ester artigo apresentará os operadores do PHP e como se comportam, incluindo os ? :, ?:, ??, ??=, <=>'
+prelude: 'Ester artigo apresentará os operadores do PHP e como se comportam, incluindo os ? :, ?:, ??, ??=, <=> e ?->'
 photo: 'https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 date: '2024-11-30'
 by: 'Lucas Scemist'
@@ -16,6 +16,7 @@ topics:
   - (??) Null Coalesce Operator
   - (??=) Null Coalesce Assignment Operator
   - (<=>) Spaceship Operator
+  - (?->) Nullsafe Operator
   - Conclusão
 icon: sparkles
 ---
@@ -45,14 +46,14 @@ A lógica é a seguinte: `(condicao) ? valor_se_true : valor_se_false`
 ```php
 $clima = 'Está Chovendo';
 
-echo $clima ?: 'Não Sabemos o Clima';
+echo $dia['clima'] ?: $clima ?: 'Não Sabemos o Clima';
 
-# Não Sabemos o Clima
+# Está Chovendo
 ```
 
 O Elvis Operator ou Short Ternary Operator é uma versão simplificada do operador ternário. Ele avalia se o valor da esquerda é "truthy" (verdadeiro) e o retorna. Caso contrário, retorna o valor da direita. É útil para verificar valores e definir padrões com menos código. Disponível desde o php 5.3.
 
-> Nota: Se **$clima** estiver vazio, nulo ou for avaliado como **false**, o operador retornará **'Não Sabemos o Clima'**.
+> Dica: Esse operador resultará em **erro** se a variavel ou chave for indefinida, se houver essa possibilodidade, o operador Null Coalesce é uma melhor escolha.
 
 # Null Coalesce Operator
 
@@ -65,6 +66,8 @@ echo $clima['descricao'] ?? 'Não há descrição de clima';
 ```
 
 O Null Coalesce Operator (operador de coalescência nula) verifica se um valor existe e não é nulo. Caso contrário, retorna um valor padrão. É útil para acessar valores em arrays ou objetos sem causar erros ao acessar índices ou propriedades inexistentes.  Disponível desde o php 7.0.
+
+> Este operador é seguro para chaves não definidas, sendo ideal para verificar valores em arrays sem se preocupar.
 
 # Null Coalesce Assignment Operator
 
@@ -98,6 +101,21 @@ O Spaceship Operator (<=>) realiza uma comparação tripla e é muito útil para
 - Retorna **-1** se o valor da esquerda for menor que o da direita.
 - Retorna **0** se os valores forem iguais.
 - Retorna **1** se o valor da esquerda for maior que o da direita.
+
+
+# Nullsafe Operator
+
+```php
+$cidade = null;
+
+echo $cidade?->clima?->temperatura;
+
+# null
+```
+
+O Nullsafe Operator (?->) permite acessar propriedades ou métodos de um objeto de forma segura, sem gerar erros caso o objeto seja null. Em vez de verificar manualmente se a variável é nula antes de acessar suas propriedades ou métodos, você pode usar o ?-> para retornar null automaticamente se o objeto for nulo, evitando exceções. Disponível desde o php 8.0.
+
+> **Nota:** Embora não seja um operador de comparação, o ?-> é útil para simplificar o código ao acessar propriedades e métodos de objetos, evitando verificações explícitas de nulidade, como **if ($objeto !== null)**.
 
 # Conclusão
 
