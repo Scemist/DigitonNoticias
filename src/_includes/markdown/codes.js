@@ -1,4 +1,4 @@
-import highlighter from '../../highlights/shiki.js'
+import { highlightCode } from '../../highlights/shiki.js'
 
 export default (markdownLib) => {
 	markdownLib.renderer.rules.fence = (tokens, idx) => {
@@ -6,6 +6,13 @@ export default (markdownLib) => {
 		const language = token.info.trim();
 		const content = token.content;
 
-		return highlighter(content, language)
+		return highlightCode(content, language)
+	};
+
+	markdownLib.renderer.rules.code_inline = (tokens, idx) => {
+		const token = tokens[idx];
+		const content = token.content;
+
+		return `<code class="text-sm bg-slate-600 dark:bg-slate-800 text-slate-300 mx-1 px-2 py-1 rounded-lg">${content}</code>`
 	};
 };

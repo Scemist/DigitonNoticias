@@ -7,6 +7,7 @@ import headings from "./src/_includes/markdown/headings.js";
 import paragraphs from "./src/_includes/markdown/paragraphs.js";
 import lists from "./src/_includes/markdown/lists.js";
 import codes from "./src/_includes/markdown/codes.js";
+import blockquotes from "./src/_includes/markdown/blockquotes.js";
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
@@ -16,6 +17,7 @@ export default function (eleventyConfig) {
 	lists(markdownLib)
 	paragraphs(markdownLib)
 	codes(markdownLib)
+	blockquotes(markdownLib)
 	eleventyConfig.setLibrary('md', markdownLib);
 
 	eleventyConfig.addCollection(

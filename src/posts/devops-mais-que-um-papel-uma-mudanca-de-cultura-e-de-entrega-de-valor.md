@@ -41,8 +41,11 @@ Nem todas as práticas e ferramentas de DevOps serão adequadas para todos os ne
 Passos fundamentais para iniciar:
 
 - Diagnóstico da cultura atual: Avaliar os gaps entre as equipes e identificar onde melhorias podem ser feitas.
+
 - Escolha de ferramentas certas: Existem diversas soluções no mercado para CI/CD, monitoramento e automação. Avalie as que melhor se adaptam ao seu ambiente.
+
 - Treinamento da equipe: Adotar DevOps requer mudança de mindset, o que inclui capacitar times para trabalharem com novos processos e ferramentas.
+
 - Adoção gradual: Priorize a implementação de práticas que tenham maior impacto e adicione novos processos conforme a maturidade da equipe evolui.
 
 ## Referência Prática
