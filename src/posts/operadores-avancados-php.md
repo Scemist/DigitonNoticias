@@ -8,8 +8,8 @@ by: 'Lucas Scemist'
 byPhoto: 'https://avatars.githubusercontent.com/u/68157089?s=150&u=abcbbc919c91cf2cd6f4bc5cb11c6db02c5f8a48&v=4'
 byLink: 'https://www.linkedin.com/in/scemist'
 tags:
-  - Programação
   - PHP
+  - Programação
 topics:
   - "(? :) Ternary Operator"
   - (?:) Elvis Operator / Short Ternary Operator
