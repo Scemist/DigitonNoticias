@@ -22,7 +22,7 @@ export function highlightCode(code, language) {
 		+ ' text-sm py-4 px-6 md:py-8 md:px-10"'
 	);
 
-	const classes = 'overflow-x-auto'
+	const classes = 'overflow-x-auto select-all'
 		+ ' dark:border dark:border-slate-700'
 		+ ' shadow shadow-gray-400 dark:shadow-inherit'
 		+ ' rounded-lg w-full min-w-full max-w-full mb-10'

@@ -13,6 +13,6 @@ export default (markdownLib) => {
 		const token = tokens[idx];
 		const content = token.content;
 
-		return `<code class="text-sm bg-slate-600 dark:bg-slate-800 text-slate-300 mx-1 px-2 py-1 rounded-lg">${content}</code>`
+		return `<code class="text-xs bg-slate-600 dark:bg-slate-800 text-slate-300 mx-1 px-2 py-1 rounded select-all">${content}</code>`
 	};
 };
