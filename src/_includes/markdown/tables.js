@@ -1,6 +1,10 @@
 export default (markdownLib) => {
 	markdownLib.renderer.rules.table_open = (tokens, idx) => {
-		return `<table class="w-full border-collapse border border-gray-500 dark:border-slate-700 rounded-lg">`;
+		return `<div class="overflow-auto"><table class="w-full border-collapse border border-gray-500 dark:border-slate-700 rounded-lg">`;
+	};
+
+	markdownLib.renderer.rules.table_close = (tokens, idx) => {
+		return `</table></div>`;
 	};
 
 	markdownLib.renderer.rules.thead_open = () => {
