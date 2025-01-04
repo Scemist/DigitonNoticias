@@ -1,6 +1,6 @@
 ---
 layout: 'base.njk'
-title: 'Tipos de Herança no PHP'
+title: 'Tipos de Herança no PHP (extends, implements, trait, abstract...)'
 prelude: 'No PHP, a herança pode ser alcançada de diversas maneiras usando extends, traits, interfaces, e classes abstratas.'
 photo: 'https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 date: '2024-11-30'
@@ -11,11 +11,11 @@ tags:
   - PHP
   - Programação
 topics:
-  - 1. Herança Simples (Extends)
-  - 2. Herança por Meio de Traits
-  - 3. Interfaces (Implements)
-  - 4. Classes Abstratas
-  - "5. Final: Prevenindo Herança ou Sobrescrita"
+  - 1. Herança Simples (extends)
+  - 2. Traits (use)
+  - 3. Interfaces (implements)
+  - 4. Classes Abstratas (extends)
+  - 5. Prevenindo Herança ou Sobrescrita com Final
   - Conclusão
 icon: sparkle
 ---
